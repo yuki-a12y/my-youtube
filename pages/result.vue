@@ -1,7 +1,7 @@
 <template>
   <div>
-    <input v-model="searcChar">
-    <NuxtLink :to="{name: 'result', query: {searcChar: searcChar}}">
+    <input v-model="searchChar">
+    <NuxtLink :to="{name: 'result', query: {searchChar: searchChar}}">
       <button>search</button>
     </NuxtLink>
     <div v-for="item in youtubeData" :key="item.id.videoId">
@@ -22,7 +22,7 @@ export default Vue.extend({
         key: 'AIzaSyD2gn2eMBuv8ofuNv_H9ckzf985y6GBLrU',
         type: 'video',
         part: 'snippet',
-        q: to.query.searcChar
+        q: to.query.searchChar
         }
       })
       .then((res) => {
@@ -30,10 +30,10 @@ export default Vue.extend({
       })
   },
   data(){
-    const searcChar: string = '';
+    const searchChar: string = '';
     const youtubeData: Array<5> = [];
     return {
-      searcChar,
+      searchChar,
       youtubeData
     }
   },
@@ -43,7 +43,7 @@ export default Vue.extend({
         key: 'AIzaSyD2gn2eMBuv8ofuNv_H9ckzf985y6GBLrU',
         type: 'video',
         part: 'snippet',
-        q: this.$route.query.searcChar
+        q: this.$route.query.searchChar
         }
       })
       .then((res) => {
