@@ -1,9 +1,6 @@
 <template>
   <div>
-    <input v-model="searchChar">
-    <NuxtLink :to="{name: 'result', query: {searchChar: searchChar}}">
-      <button>search</button>
-    </NuxtLink>
+    <searchInput />
     <div v-for="item in youtubeData" :key="item.id.videoId">
       <NuxtLink :to="{name: 'watchVideo', query: {videoId: item.id.videoId }}">{{ item.snippet.title }}</NuxtLink>
     </div>
@@ -30,10 +27,8 @@ export default Vue.extend({
       })
   },
   data(){
-    const searchChar: string = '';
     const youtubeData: Array<5> = [];
     return {
-      searchChar,
       youtubeData
     }
   },

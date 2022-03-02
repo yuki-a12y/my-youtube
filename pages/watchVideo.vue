@@ -1,5 +1,6 @@
 <template>
   <div>
+    <searchInput />
     <youtube
     ref="youtube"
     :video-id="videoId"/>
