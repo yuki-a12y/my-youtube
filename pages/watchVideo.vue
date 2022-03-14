@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 import VueYoutube from 'vue-youtube'
 
@@ -15,7 +15,7 @@ Vue.use(VueYoutube)
 
 export default Vue.extend({
     data(){
-        const videoId: string = this.$route.query.videoId
+        const videoId = this.$route.query.videoId
         return {
             videoId
         }
