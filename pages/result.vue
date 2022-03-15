@@ -16,7 +16,7 @@ export default Vue.extend({
     next()
     this.$axios.get('https://www.googleapis.com/youtube/v3/search', {
         params: {
-        key: 'AIzaSyCbVx8EF4e1jyommmEqjodKg5prVeBuid8',
+        key: this.$config.apiKey,
         type: 'video',
         part: 'snippet',
         q: to.query.searchChar
