@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <div class="container">
     <form>
       <input v-model="searchChar" type="text">
@@ -27,6 +27,10 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.main{
+  border-bottom: solid 0.1rem rgb(100 100 100);
+}
+
 .container{
   width: 15rem;
   height: 1rem;
