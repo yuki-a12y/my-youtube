@@ -16,7 +16,7 @@ export default Vue.extend({
     next()
     this.$axios.get('https://www.googleapis.com/youtube/v3/search', {
         params: {
-        key: this.$config.API_KEY,
+        key: 'AIzaSyCbVx8EF4e1jyommmEqjodKg5prVeBuid8',
         type: 'video',
         part: 'snippet',
         q: to.query.searchChar
@@ -35,7 +35,7 @@ export default Vue.extend({
   mounted (){
     this.$axios.get('https://www.googleapis.com/youtube/v3/search', {
         params: {
-        key: 'AIzaSyD2gn2eMBuv8ofuNv_H9ckzf985y6GBLrU',
+        key: this.$config.apiKey,
         type: 'video',
         part: 'snippet',
         q: this.$route.query.searchChar
